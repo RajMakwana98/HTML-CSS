@@ -1,6 +1,7 @@
 const main = document.getElementById("main");
 const add_userBtn = document.getElementById("add_user");
 const doubleBtn = document.getElementById("double");
+const showCrorepatiBtn = document.getElementById("show_crorepati");
 const sortBtn = document.getElementById("sort");
 const calculate_wealthBtn = document.getElementById("calculate_wealth");
 
@@ -30,6 +31,13 @@ function doubleMoney() {
   data = data.map((user) => {
     return { ...user, money: user.money * 2 };
   });
+
+  updateDOM();
+}
+
+//Sort user by Crorepati
+function sortRichest() {
+  data.sort((a, b) => b.money - a.money);
 
   updateDOM();
 }
@@ -64,3 +72,6 @@ function formatMoney(number) {
 //Event Listeners
 add_userBtn.addEventListener("click", getRandomUser);
 doubleBtn.addEventListener("click", doubleMoney);
+// showCrorepatiBtn.addEventListener("click", showCrorepati);
+sortBtn.addEventListener("click", sortRichest);
+// calculate_wealthBtn.addEventListener("click", calculateWeatlh);
