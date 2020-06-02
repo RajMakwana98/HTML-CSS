@@ -38,6 +38,13 @@ button {
   font-size: 14px;
 }
 
+button:hover {
+  background-color: #34495e;
+  border-color: #34495e;
+  color: white;
+  font-size: 15px;
+}
+
 main {
   flex: 1;
   padding: 10px 20px;

@@ -56,6 +56,17 @@ function addData(obj) {
   updateDOM();
 }
 
+//Calculate all users wealth money
+function calculateWeatlh() {
+  const wealth = data.reduce((acc, user) => (acc += user.money), 0);
+
+  const wealthEl = document.createElement("div");
+  wealthEl.innerHTML = `<h3>Total Wealth <strong>${formatMoney(
+    wealth
+  )}</strong></h3>`;
+  main.appendChild(wealthEl);
+}
+
 //Update DOM
 function updateDOM(providedData = data) {
   // Clear main div
@@ -81,4 +92,4 @@ add_userBtn.addEventListener("click", getRandomUser);
 doubleBtn.addEventListener("click", doubleMoney);
 showCrorepatiBtn.addEventListener("click", showCrorepati);
 sortBtn.addEventListener("click", sortRichest);
-// calculate_wealthBtn.addEventListener("click", calculateWeatlh);
+calculate_wealthBtn.addEventListener("click", calculateWeatlh);
