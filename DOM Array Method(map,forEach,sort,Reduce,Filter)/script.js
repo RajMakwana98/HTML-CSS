@@ -42,6 +42,13 @@ function sortRichest() {
   updateDOM();
 }
 
+//Show only Crorepati person in a list
+function showCrorepati() {
+  data = data.filter((user) => user.money > 10000000);
+
+  updateDOM();
+}
+
 // Add new  obj to data array
 function addData(obj) {
   data.push(obj);
@@ -72,6 +79,6 @@ function formatMoney(number) {
 //Event Listeners
 add_userBtn.addEventListener("click", getRandomUser);
 doubleBtn.addEventListener("click", doubleMoney);
-// showCrorepatiBtn.addEventListener("click", showCrorepati);
+showCrorepatiBtn.addEventListener("click", showCrorepati);
 sortBtn.addEventListener("click", sortRichest);
 // calculate_wealthBtn.addEventListener("click", calculateWeatlh);
