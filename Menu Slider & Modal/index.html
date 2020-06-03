@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menu Slider & Model</title>
+    <title>Menu Slider & modal</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
@@ -32,13 +32,11 @@
 
       <h1>My Landing page</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nisi natus
-        qui adipisci tempore inventore eaque quas repellat! Sint, ipsa!
-        Quibusdam dignissimos quo soluta quisquam quos magnam adipisci nostrum
-        aspernatur.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque,
+        dolore!
       </p>
 
-      <button class="cta-btn" id="open">SignUp</button>
+      <button class="cta-btn" id="open">Sign Up</button>
     </header>
 
     <div class="container">
@@ -81,27 +79,37 @@
       </p>
     </div>
 
-    <!-- Model -->
-    <div id="model" class="model-container">
-      <div class="model">
+    <!-- modal -->
+    <div id="modal" class="modal-container">
+      <div class="modal">
         <button class="close-btn" id="close">
           <i class="fa fa-times"></i>
         </button>
 
-        <div class="model-header">
+        <div class="modal-header">
           <h3>Sign Up</h3>
         </div>
-        <div class="model-content">
+        <div class="modal-content">
           <p>Register with us to get offers, support and more</p>
-          <form class="model-form">
+          <form class="modal-form">
             <div>
               <label for="name">Name</label>
-              <input type="text" id="name" placeholder="Enter Name" />
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter Name"
+                class="form-input"
+              />
             </div>
 
             <div>
               <label for="email">E-mail</label>
-              <input type="email" id="email" placeholder="Enter Emial" />
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter Emial"
+                class="form-input"
+              />
             </div>
 
             <div>
@@ -110,6 +118,7 @@
                 type="password"
                 id="password"
                 placeholder="Enter Password"
+                class="form-input"
               />
             </div>
 
@@ -119,6 +128,7 @@
                 type="password"
                 id="password2"
                 placeholder="Confirm Password"
+                class="form-input"
               />
             </div>
 
@@ -128,6 +138,6 @@
       </div>
     </div>
 
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
