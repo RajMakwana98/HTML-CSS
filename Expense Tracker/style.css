@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 2), 0 1px 2px rgba(0, 0, 0, 2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vh;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  overflow: auto;
+}
+
+.container {
+  margin: 5px auto;
+  width: 350px;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 2px;
+}
+
+h3 {
+  border-bottom: #bbb 2px solid;
+  padding-bottom: 10px;
+  margin: 4px 10px;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.inc-exp-container {
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 2px solid #dedede;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: #2ecc71;
+}
+
+.money.minus {
+  color: #c0392b;
+}
+
+.label {
+  display: inline-block;
+  font-size: 2;
+  margin: 5px;
+  padding-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"] {
+  border: 2px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 14px;
+  padding-bottom: 10px;
+  width: 100%;
+  margin-top: 3px;
+}
+
+.btn {
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  color: #32ff7e;
+  border: 2px solid #32ff7e;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 8px;
+  width: 100%;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: #32ff7e;
+  color: white;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: white;
+  box-sizing: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+  border-right: 5px solid #c0392b;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
