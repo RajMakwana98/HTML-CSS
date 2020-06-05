@@ -21,7 +21,6 @@ body {
 
 .music-container {
   background-color: white;
-  border-top: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 15px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.6);
   display: flex;
@@ -35,6 +34,17 @@ body {
 .img-container {
   position: relative;
   width: 110px;
+}
+.img-container::after {
+  content: "";
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, 50%);
 }
 
 .img-container img {
@@ -90,4 +100,44 @@ body {
 
 .action-btn:focus {
   outline: 0;
+}
+
+.music-info {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  padding: 10px 10px 10px 150px;
+  opacity: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 0;
+}
+
+.music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.music-info h4 {
+  margin: 0;
+}
+
+.progress-container {
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
+
+.progress {
+  background-color: #fe8daa;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
 }
