@@ -15,8 +15,9 @@ body {
 button {
   cursor: pointer;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 5px;
   padding: 5px 15px;
+  border: 0;
 }
 
 select {
@@ -38,9 +39,14 @@ select:hover {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: #a7c5e3;
+  color: white;
+}
+
 select:focus,
 button:focus {
-  outline: none;
+  outline: 0;
 }
 
 .settings-btn {
