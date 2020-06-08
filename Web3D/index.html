@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Script  -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+
+    <!-- Css Styling -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .web3d {
+        height: 100vh;
+        width: 100%;
+      }
+
+      .web3d model-viewer {
+        height: 100vh;
+        width: 100%;
+      }
+
+      .btn-container {
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+        text-align: center;
+      }
+
+      button {
+        border: none;
+        background-color: #d35400;
+        height: 40px;
+        margin: 5px;
+        width: 150px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        color: white;
+      }
+
+      button:focus {
+        outline: none;
+      }
+    </style>
+
+    <title>Web 3D</title>
+  </head>
+
+  <body>
+    <div class="web3d">
+      <model-viewer
+        src="./RobotExpressive.glb"
+        alt="A 3D model of an astronaut"
+        id="model"
+        auto-rotate
+        camera-controls
+        skybox-image="cons.hdr"
+        animation-name="Running"
+        autoplay
+      ></model-viewer>
+
+      <div class="btn-container">
+        <button type="button" onclick="stop()">STOP</button>
+        <button type="button" onclick="run()">RUNNING</button>
+        <button type="button" onclick="wave()">WAY</button>
+      </div>
+    </div>
+
+    <!-- Button Functionality -->
+    <script>
+      let modelViewer = document.getElementById("model");
+
+      function stop() {
+        modelViewer.animationName = "none";
+      }
+
+      function run() {
+        modelViewer.animationName = "Running";
+      }
+
+      function wave() {
+        modelViewer.animationName = "Wave";
+      }
+    </script>
+  </body>
+</html>
