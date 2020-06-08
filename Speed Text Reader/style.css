@@ -58,6 +58,9 @@ select:focus {
   transition: all 1s ease-in-out;
 }
 
+.text-box.show {
+  transform: translate(-50%, 0);
+}
 .text-box select {
   background-color: darksalmon;
   border: 0;
@@ -137,7 +140,7 @@ main {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   main {
     grid-template-columns: 1fr;
   }
