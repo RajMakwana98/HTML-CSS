@@ -1,0 +1,187 @@
+:root {
+  --primary-color: #f7c08a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Styling */
+html,
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+h1,
+h2,
+h3 {
+  padding-bottom: 20px;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.primary-text {
+  color: var(--primary-color);
+}
+
+.btn{
+    font-size: 18px;
+    background: #333;
+    color: white;
+    padding:13px 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover{
+    background: var(--primary-color);
+    color: #333;
+}
+
+.btn-light{
+    background: var(--primary-color);
+}
+
+.bg-light{
+  background: #f4f4f4;
+  color:black;
+}
+
+.bg-dark{
+    background: #333;
+    color: var(--primary-color);
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+  overflow: auto;
+}
+
+/* Navbar */
+#navbar {
+  background: #333;
+  color: #fff;
+  overflow: auto;
+}
+
+#navbar a {
+  color: #fff;
+}
+
+#navbar h1 {
+  float: left;
+  padding-top: 20px;
+}
+
+#navbar ul {
+  list-style: none;
+  float: right;
+}
+
+#navbar ul li {
+  float: left;
+}
+
+#navbar ul li a {
+  display: block;
+
+  padding: 20px;
+  text-align: center;
+}
+
+#navbar ul li a:hover {
+  color: var(--primary-color);
+  background: #444;
+}
+
+/* Showcase */
+#showcase {
+  background: url("../media/showcase.jpg") no-repeat center center/cover;
+  height: 600px;
+}
+
+#showcase .showcase-content {
+  color: #fff;
+  text-align: center;
+  padding-top: 150px;
+}
+
+#showcase .showcase-content h2 {
+  font-size: 60px;
+  line-height: 1.2em;
+}
+
+#showcase .showcase-content p {
+  font-size: 20px;
+  line-height: 1.7em;
+  padding-bottom: 20px;
+}
+
+/* Home Info */
+
+#home-info{
+    height: 400px;
+}
+#home-info .home-img{
+    background: url('../media/photo-1.jpg') no-repeat;
+    float: left;
+    width: 50%;
+    min-height: 100%;
+}
+
+#home-info .info-content{
+    width: 50%;
+    float: right;
+    height: 100%;
+    text-align: center;
+    padding: 50px 30px;
+    overflow: hidden;
+    color: #fff ;
+}
+
+#home-info .info-content p{
+    padding-bottom: 30px;
+}
+
+
+/* Features section */
+.box{
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  padding: 45px;
+}
+
+.box i{
+  margin-bottom: 10px;
+}
+
+/* clear div */
+.clear{
+  clear: both;
+}
+
+/* Footer */
+#main-footer{
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 10px;
+  margin: auto;
+}
+
+
+
