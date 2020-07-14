@@ -3,7 +3,7 @@
   --page-2: tan;
   --page-3: teal;
   --page-4: slateblue;
-  --animate-spped: 1s;
+  --animate-spped: 2s;
 }
 
 
@@ -15,6 +15,8 @@ body {
   padding: 0;
   overflow: hidden;
 }
+
+/* Page Colors */
 
 #page-1 {
   background: var(--page-1);
@@ -29,6 +31,8 @@ body {
 #page-4 {
   background: var(--page-4);
 }
+
+/* page styles */
 
 .page{
     display: flex;
@@ -49,6 +53,8 @@ body {
 .page p{
     font-size: 1.3rem;
 }
+
+/* button style */
 
 .btn{
     display: inline-block;
@@ -72,3 +78,30 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
+
+/* Page- 1 Animation */
+#page-1 h1{
+    transform: translateY(-1200px);
+    animation: heading var(--animate-spped) forwards ease-in ;
+}
+
+#page-1 p{
+    transform: translateX(-1800px);
+    animation: para var(--animate-spped) forwards ease-in 1s ;
+}
+
+
+/* keyframes */
+@keyframes heading{
+    to{
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes para{
+    to{
+        transform: translateX(0);
+    }
+}
+
